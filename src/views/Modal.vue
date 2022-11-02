@@ -5,6 +5,13 @@
                 <div class="modal-content">
                     <h1>This a Modal header</h1>
                     <p>This sis a simple paragraph</p>
+                    <div>
+                        <input type="text" v-model="firstNumber">
+                        <input type="text" v-model="secondNumber">
+                    </div>
+                    <div> 
+                    <button @click="saveInformation">Enregistrer</button>
+                    </div>
                 </div>
             </modal-component>
             <button v-show="!modalActive" @click="toggleModal">Open Modal</button>
@@ -19,12 +26,20 @@ export default {
     components: { ModalComponent },
     setup() {
         const modalActive = ref(false);
+        const firstNumber = ref(null);
+        const secondNumber = ref(null);
         const toggleModal = ()=>{
             modalActive.value = !modalActive.value;
         }
+        const saveInformation = () => {
+            console.log(firstNumber.value, secondNumber.value)
+        }
         return{
             modalActive, 
-            toggleModal
+            firstNumber,
+            secondNumber,
+            toggleModal,
+            saveInformation
         }
     },
 }
