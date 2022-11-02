@@ -33,7 +33,7 @@ export default {
 <style  scoped>
 .home{
     background-color: rgba(0,176,234,0.5);
-    height: 100vh;
+  
     display: flex;
     justify-content: center;
     align-items:center;

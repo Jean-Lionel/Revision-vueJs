@@ -29,6 +29,9 @@ export default {
 
 <style >
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+body{
+    height: 100vh;
+}
 
 *{
     margin: 0;
