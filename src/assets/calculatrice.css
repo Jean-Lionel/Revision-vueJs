@@ -1,0 +1,37 @@
+.parent-calculatrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 730px;
+    border: 2px solid black;
+}
+
+.ecran{
+    border: 2px solid hsl(210, 23%, 95%);
+    width: 715px;
+    height: 80px;
+    text-align: right;
+    font-weight: 800;
+    font-family: calculator;
+    overflow: auto;
+    
+}
+.btn-right{
+    display: flex;
+    justify-content: right;
+}
+.calculatrice{
+    border: 2px solid hsl(210, 23%, 95%);
+    width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    display: inline-block;
+    margin: 2px;
+    width: 116px;
+    padding: 5px;
+    font-size: 36px;
+}
