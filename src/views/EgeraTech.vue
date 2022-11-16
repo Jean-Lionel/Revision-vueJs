@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>{{ companyName }}</h1>
+     
         {{ getIbisomwa }}   
 
         <div>
