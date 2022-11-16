@@ -1,20 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import store  from "./store/index"
+import axiosInstance from './plugins/axios'
 
 const app = createApp(App)
 
-app.config.errorHandler = (err) => {
-  /* handle error */
-  
-}
-app.config.globalProperties.PRORIETE = {
-    name : "Jean Lionel le hacker", 
-    tel : 79614036
-}
+// Configuration de axios 
 
-app.use(store)
-app.use(router)
+app.config.globalProperties.axios =  { ...axiosInstance }
 
-app.mount('#app')
+app
+.use(store)
+.use(router)
+.mount('#app')

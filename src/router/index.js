@@ -7,7 +7,7 @@ import ChartExemple from "../views/ChartExemple.vue"
 import ExempleJean from "../views/ExempleJean.vue"
 import UserDjango from "../views/UserDjango.vue"
 import Modal from "../views/Modal.vue"
-
+import EgeraTech from "../views/EgeraTech.vue"
 
 
 const router = createRouter({
@@ -18,6 +18,12 @@ const router = createRouter({
       name: 'home',
       component : Home
     }, 
+    {
+      path: '/egera-tech',
+      name: 'egera-tech',
+      component : EgeraTech
+    }, 
+   
     {
       path: '/users/:teamId',
       name: 'users',

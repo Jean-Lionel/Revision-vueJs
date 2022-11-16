@@ -5,14 +5,13 @@
       <div>
         <router-link to="/">Home</router-link>
         <router-link to="/users/10">Users 10</router-link>
-        <router-link to="/users/12">Users 12</router-link>
-        <router-link to="/users/13">Users 13</router-link>
         <router-link to="/calculatrice">Calculatrice</router-link>
         <router-link to="/audio-play">Audio Play</router-link>
         <router-link to="/chart-js">Chart JS</router-link>
         <router-link to="/users-list"> Github users</router-link>
         <router-link to="/user-django"> Users from Django</router-link>
         <router-link to="/exemple-modal"> Modal</router-link>
+            <router-link to="/egera-tech">Egera Tech</router-link>
       </div>
   </nav>
 
@@ -28,7 +27,7 @@ export default {
 </script>
 
 <style >
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
 body{
     height: 100vh;
 }
