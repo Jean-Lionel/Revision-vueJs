@@ -8,11 +8,17 @@ import ExempleJean from "../views/ExempleJean.vue"
 import UserDjango from "../views/UserDjango.vue"
 import Modal from "../views/Modal.vue"
 import EgeraTech from "../views/EgeraTech.vue"
+import Vente from "../views/Vente.vue"
 
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/ventes',
+      name: 'ventes',
+      component : Vente
+    }, 
     {
       path: '/',
       name: 'home',

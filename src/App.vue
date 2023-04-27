@@ -12,6 +12,7 @@
         <router-link to="/user-django"> Users from Django</router-link>
         <router-link to="/exemple-modal"> Modal</router-link>
             <router-link to="/egera-tech">Egera Tech</router-link>
+            <router-link to="/ventes">ventes</router-link>
       </div>
   </nav>
 

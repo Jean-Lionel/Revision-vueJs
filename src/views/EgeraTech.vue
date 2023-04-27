@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import axios from "axios";
+
 export default {
     data(){
         return{
@@ -20,7 +20,7 @@ export default {
         }
     },
     mounted(){
-        axios.get(this.$store.state.baseUrl +"intangamarara-ibisomwa-unomusi/")
+        this.axios.get("intangamarara-ibisomwa-unomusi/")
         .then(resp =>{
             console.log(resp)
             this.ibisomwa = resp
