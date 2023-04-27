@@ -13,19 +13,21 @@
                     <td>{{ art.name }}</td>
                     <td>{{ art.qte }}</td>
                     <td v-for="client_number in number">
+                        
                         <input type="text" @input="event => setValue(client_number, art.id, event.target.value)"
                             style="width: 100px !important;">
-                    </td>
-                    <td>
-
-                        <span v-if="resteNonAttribuer(art.id) > 0">{{ resteNonAttribuer(art.id) }}</span>
-                        <span v-else class="text-danger">{{ resteNonAttribuer(art.id) }}</span>
-                    </td>
-                </tr>
-            </table>
-
-        </div>
-    </div>
+                                        </td>
+                                        <td>
+                        
+                                            <span class="orange" v-if="resteNonAttribuer(art.id) > 0">{{ resteNonAttribuer(art.id) }}</span>
+                                            <span class="vert" v-else-if="resteNonAttribuer(art.id) == 0">{{ resteNonAttribuer(art.id) }}</span>
+                                            <span c v-else class="text-danger">{{ resteNonAttribuer(art.id) }}</span>
+                                        </td>
+                                    </tr>
+                                </table>
+            
+                            </div>
+                        </div>
 </template>
 
 <script>
@@ -48,16 +50,33 @@ export default {
                     price: 2000,
                     qte: 4,
                 },
+                {
+                    id: "3",
+                    name: "Samusung Galaxy",
+                    price: 200000,
+                    qte: 12,
+                },
+                {
+                    id: "4",
+                    name: "MAC BOOK PRO",
+                    price: 1500,
+                    qte: 7,
+                },
             ]
 
         }
     },
     methods: {
         resteNonAttribuer(article_id) {
+
             const x = this.products.find(product => product.id == article_id);
             // Le produits peut n'est pas être disponible
-            const artiles = this.arrayData.filter(e => e.articleId == x?.id);
-            let sum = this.arrayData.reduce((c, object) => object.value * 1 + c, 0)
+            const artiles = this.arrayData.filter(e => e.articleId == x.id);
+            let sum = 0;
+            if (artiles.length > 0) {
+                sum = artiles.reduce((c, object) => object.value * 1 + c, 0)
+            }
+
             return x.qte - sum;
         },
         setValue(clientId, article, v) {
@@ -83,22 +102,33 @@ export default {
 </script>
 
 <style  scoped>
+
+td span{
+    display: block;
+}
 .text-danger {
-    color: rgb(248, 108, 108);
+    background: rgb(248, 108, 108);
     font-size: smaller;
+}
+.vert{
+    background : green;
+}
+
+.orange{
+    background: orange;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-
-
+    
+    
 }
 
 th,
 tr,
 td {
     border: 1px solid pink;
-    padding: 0 30px;
+    padding: 0 6px;
 }
 </style>

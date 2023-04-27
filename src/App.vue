@@ -13,6 +13,7 @@
         <router-link to="/exemple-modal"> Modal</router-link>
             <router-link to="/egera-tech">Egera Tech</router-link>
             <router-link to="/ventes">ventes</router-link>
+                        <router-link to="/split-invoices">split-invoices</router-link>
       </div>
   </nav>
 
